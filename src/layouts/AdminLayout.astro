@@ -1,0 +1,10 @@
+---
+// src/layouts/BaseLayout.astro
+import Navbar from "@/components/admin-navbar/AdminNavbar";
+---
+
+<Navbar client:load />
+<!-- client:load si lo querés interactivo -->
+<div>
+  <slot />
+</div>

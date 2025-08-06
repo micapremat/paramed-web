@@ -52,18 +52,46 @@ const features = [
   </p>
 </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+<div class='mt-16 md:mt-0'>
+  <h2 class='text-4xl lg:text-5xl font-bold lg:tracking-tight mb-10'>
+    ¿Por qué elegirnos?
+  </h2>
+  <p class='text-lg mt-4 text-font-black ml-2'>
+    <span class=" font-bold "> Títulos oficiales: </span> Avalados por las autoridades educativas, garantizando una
+    formación reconocida y de calidad.
+  </p>
+  <p class='text-lg mt-4 text-font-black ml-2'>
+    <span class=" font-bold"> Profesionales en actividad: </span> Aprendé de docentes que trabajan en el campo de
+    la salud, compartiendo su experiencia y conocimientos actualizados.
+  </p>
+  <p class='text-lg mt-4 text-font-black ml-2'>
+    <span class=" font-bold">  Formación práctica:  </span>Contamos con laboratorios equipados y simulaciones
+    realistas para que te prepares de manera integral.
+  </p>
+  <p class='text-lg mt-4 text-font-black ml-2'>
+    <span class=" font-bold">  Compromiso con la comunidad:   </span> Formamos profesionales que contribuyen al
+    bienestar social, trabajando en equipo con otros especialistas de la salud.
+  </p>
+</div>
+
+<div class='grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16'>
   {
     features.map((item) => (
-      <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
+      <div class='flex gap-4 items-start'>
+        <div class='mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0'>
+     <!--     <Icon class='text-white' name={item.icon} />-->
         </div>
         <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          <h3 class='font-semibold text-lg'>{item.title}</h3>{" "}
+          <p class='text-slate-500 mt-2 leading-relaxed'>{item.description}</p>
         </div>
       </div>
     ))
   }
 </div>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    h2 {
+      font-family: "Roboto", serif;
+    }
+    </style>

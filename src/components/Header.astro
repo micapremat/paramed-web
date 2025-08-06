@@ -1,0 +1,58 @@
+---
+import { Picture } from "astro:assets";
+import Link from "@/components/ui/link.astro";
+import paramed from "@/assets/paramed.png";
+---
+
+<main class='grid lg:grid-cols-2 place-items-center pb-8 md:pb-12'>
+  <div class='py-6 md:order-1 hidden md:block'>
+    <Picture
+      src={paramed}
+      alt='Astronaut in the air'
+      widths={[180, 380, 580]}
+      sizes='(max-width: 500px) 100vw, 620px'
+      loading='eager'
+      format='avif'
+      width={550}
+    />
+  </div>
+  <div>
+    <h1
+      class='text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter'>
+      Instituto Superior de Carerras Paramedicas
+    </h1>
+    <p class='text-lg mt-4 text-slate-600 max-w-xl'>
+      Dictamos carreras paramédicas con títulos oficiales y un enfoque práctico,
+      respaldado por un equipo de profesionales de la salud con amplia
+      experiencia.
+    </p>
+    <div class='mt-6 flex flex-col sm:flex-row gap-3'>
+      <Link
+        href='#'
+        href='https://web3templates.com/templates/astroship-starter-website-template-for-astro'
+        target='_blank'
+        class='flex gap-1 items-center justify-center'
+        rel='noopener'>
+        <!-- <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" /> -->
+
+        Ver carreras
+      </Link>
+      <Link
+        size='lg'
+        style='outline'
+        rel='noopener'
+        href='https://github.com/surjithctly/astroship'
+        class='flex gap-1 items-center justify-center'
+        target='_blank'>
+        <!-- <Icon class='text-black w-4 h-4' name='bx:bxl-github' /> -->
+        Inscribirme
+      </Link>
+    </div>
+  </div>
+</main>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+  h1 {
+    font-family: "Roboto", serif;
+  }
+</style>

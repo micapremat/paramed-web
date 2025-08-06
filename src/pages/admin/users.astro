@@ -1,19 +1,19 @@
 ---
 import Contactform from "@/components/Contactform.astro";
 import Container from "@/components/Container.astro";
-import Sectionhead from "@/components/SectionHead.astro";
 import Layout from "@/layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
+import { Astronav } from "astro-navbar";
+import AdminLayout from "@/layouts/AdminLayout.astro";
 ---
 
-<Layout title='Contacto'>
+<Layout title='Admin'>
   <Container>
-    <Sectionhead>
-      <Fragment slot='title'>Contact</Fragment>
-      <Fragment slot='desc'>We are a here to help.</Fragment>
-    </Sectionhead>
-
-    <div class='grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16'>
+    <AdminLayout />
+    <div>
+      <slot />
+    </div>
+    <!-- <div class='grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16'>
       <div>
         <h2 class='font-medium text-2xl text-gray-800'>Contact Astroship</h2>
         <p class='text-lg leading-relaxed text-slate-500 mt-3'>
@@ -39,6 +39,6 @@ import { Icon } from "astro-icon/components";
       <div>
         <Contactform />
       </div>
-    </div>
+    </div> -->
   </Container>
 </Layout>
