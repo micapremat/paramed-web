@@ -2,16 +2,35 @@
 import Contactform from "@/components/Contactform.astro";
 import Container from "@/components/Container.astro";
 import Layout from "@/layouts/Layout.astro";
-import { Icon } from "astro-icon/components";
-import { Astronav } from "astro-navbar";
 import AdminLayout from "@/layouts/AdminLayout.astro";
+import Table from "@/components/Table";
+
+const rows = [
+  {
+    nombre: "Alice",
+    apellido: "Alice",
+    email: "aice@gmail.com",
+    telefono: "1244588",
+    carrera: "Developer",
+  },
+];
+const headers = [
+  { key: "nombre", label: "Nombre" },
+  { key: "apellido", label: "Apellido" },
+  { key: "email", label: "Email" },
+  { key: "telefono", label: "Telefono" },
+  { key: "carrera", label: "Carrera" },
+];
 ---
 
 <Layout title='Admin'>
   <Container>
     <AdminLayout />
-    <div>
-      <slot />
+    <div class='my-2'>
+      <div class='my-2'>
+        <h2 class='font-semibold text-lg'>Usuarios registrados:</h2>
+      </div>
+      <Table headers={headers} rows={rows} client:load />
     </div>
     <!-- <div class='grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16'>
       <div>

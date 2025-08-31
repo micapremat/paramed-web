@@ -11,7 +11,7 @@ export default function Navbar() {
             <a href="/">Usuarios</a>
           </li>
           <li>
-            <a>Cursos</a>
+            <a href="/courses">Cursos</a>
           </li>
         </ul>
       </nav>
