@@ -6,69 +6,70 @@ import Sectionhead from "@/components/SectionHead.astro";
 import rx from "@/assets/rx.jpg";
 import iq from "@/assets/instrumentacion.jpg";
 import hem from "@/assets/hemoterapia.jpg";
-
 ---
 
-<Layout title="About">
+<Layout title='About'>
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Instituto ParaMED</Fragment>
-      <Fragment slot="desc">Más de 20 años de experiencia formando profesionales</Fragment>
+      <Fragment slot='title'>Instituto ParaMED</Fragment>
+      <Fragment slot='desc'
+        >Más de 20 años de experiencia formando profesionales</Fragment
+      >
     </Sectionhead>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-       Sobre nosotros
-      </h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        Somos un equipo interdisciplinario de profesionales del área de la salud, con más de 20 años de experiencia en la formación de Técnicos en Salud.
-
-        Desde este rol docente, apostamos a la formación de profesionales técnicos críticos, creativos comprometidos con la realidad y capaces de transformarla, asumiendo responsabilidades de asistencia, atención, gerenciamiento, gestión y planificación de acciones en los diferentes ámbitos de la salud pública.
-        
-        Nuestra Propuesta es abordar las distintas asignaturas del diseño curricular, desde una perspectiva teórico-práctica. Desde el 1ª año de la carrera el alumno tiene pleno ejercicio e inserción en las actividades propias y diarias del ámbito hospitalario especifico para el que se forma.
+    <div class='flex flex-col gap-3 mx-auto max-w-4xl mt-16'>
+      <h2 class='font-bold text-3xl text-gray-800'>Sobre nosotros</h2>
+      <p class='text-lg leading-relaxed text-slate-500'>
+        Somos un equipo interdisciplinario de profesionales del área de la
+        salud, con más de 20 años de experiencia en la formación de Técnicos en
+        Salud. Desde este rol docente, apostamos a la formación de profesionales
+        técnicos críticos, creativos comprometidos con la realidad y capaces de
+        transformarla, asumiendo responsabilidades de asistencia, atención,
+        gerenciamiento, gestión y planificación de acciones en los diferentes
+        ámbitos de la salud pública. Nuestra Propuesta es abordar las distintas
+        asignaturas del diseño curricular, desde una perspectiva
+        teórico-práctica. Desde el 1ª año de la carrera el alumno tiene pleno
+        ejercicio e inserción en las actividades propias y diarias del ámbito
+        hospitalario especifico para el que se forma.
       </p>
     </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Picture
-                src={rx}
-                alt="Radiología"
-                sizes="(max-width: 800px) 100vw, 400px"
-                width={400}
-                height={400}
-                class="w-full rounded-md transition group-hover:shadow-xl bg-white object-cover object-center aspect-square"
-              />
-              
-            </div>
-          </div>
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Picture
-                src={iq}
-                alt="Instrumentación Quirúrgica"
-                sizes="(max-width: 800px) 100vw, 400px"
-                width={400}
-                height={400}
-                class="w-full rounded-md transition group-hover:shadow-xl bg-white object-cover object-center aspect-square"
-              />
-              
-            </div>
-          </div>
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Picture
-                src={hem}
-                alt="Hemoterapia"
-                sizes="(max-width: 800px) 100vw, 400px"
-                width={400}
-                height={400}
-                class="w-full rounded-md transition group-hover:shadow-xl bg-white object-cover object-center aspect-square"
-              />
-              
-            </div>
-          </div>
+    <div class='grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12'>
+      <div class='group'>
+        <div class='w-full aspect-square'>
+          <Picture
+            src={rx}
+            alt='Radiología'
+            sizes='(max-width: 800px) 100vw, 400px'
+            width={400}
+            height={400}
+            class='w-full rounded-md transition group-hover:shadow-xl bg-white object-cover object-center aspect-square'
+          />
+        </div>
+      </div>
+      <div class='group'>
+        <div class='w-full aspect-square'>
+          <Picture
+            src={iq}
+            alt='Instrumentación Quirúrgica'
+            sizes='(max-width: 800px) 100vw, 400px'
+            width={400}
+            height={400}
+            class='w-full rounded-md transition group-hover:shadow-xl bg-white object-cover object-center aspect-square'
+          />
+        </div>
+      </div>
+      <div class='group'>
+        <div class='w-full aspect-square'>
+          <Picture
+            src={hem}
+            alt='Hemoterapia'
+            sizes='(max-width: 800px) 100vw, 400px'
+            width={400}
+            height={400}
+            class='w-full rounded-md transition group-hover:shadow-xl bg-white object-cover object-center aspect-square'
+          />
+        </div>
+      </div>
     </div>
   </Container>
 </Layout>

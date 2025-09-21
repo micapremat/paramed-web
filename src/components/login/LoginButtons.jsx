@@ -16,6 +16,12 @@ export default function LoginButtons() {
     // Podés redirigir al login o home
     window.location.href = "/";
   }
+
+  const handleLoginSuccess = () => {
+    setLoggedIn(true);
+    setShowLogin(false);
+  };
+
   return (
     <>
       <header className="flex justify-between p-4 hover:text-primary active:text-primary text-sm">
@@ -33,7 +39,7 @@ export default function LoginButtons() {
       {showLogin && (
         <Login
           onClose={() => setShowLogin(false)}
-          onSuccess={() => setLoggedIn(true)}
+          onSuccess={() => handleLoginSuccess()}
         />
       )}
     </>

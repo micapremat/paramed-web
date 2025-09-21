@@ -33,10 +33,8 @@ export default function MenuItemsDynamic() {
   }
 
   const filteredItems = items.filter((item) => {
-    if (item.displayLoggedIn !== undefined) {
-      return loggedIn;
-    }
-    return item.displayLoggedIn;
+    if (item.displayLoggedIn && !loggedIn) return false;
+    return true;
   });
 
   return (
@@ -54,7 +52,7 @@ export default function MenuItemsDynamic() {
           </a>
         </li>
       ))}
-      {isAdmin && (
+      {isAdmin && loggedIn && (
         <li>
           <a
             href="/admin/users"

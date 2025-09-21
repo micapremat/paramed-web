@@ -22,6 +22,7 @@ export default function Login({ onClose, onSuccess }) {
     if (res.ok) {
       console.log(data);
       localStorage.setItem("token", data.token);
+      onSuccess();
       //window.location.href = "/";
     } else {
       alert(data.message || "Error al iniciar sesión");
